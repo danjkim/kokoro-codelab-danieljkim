@@ -13,8 +13,8 @@ set -e
 # set -x
 
 # Install dependencies
-sudo apt-get update
-sudo apt-get install -y make build-essential curl
+apt-get update
+apt-get install -y make build-essential curl
 
 # Install Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
