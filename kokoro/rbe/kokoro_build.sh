@@ -26,3 +26,6 @@ rustup target add wasm32-unknown-unknown
 # in the job configuration.
 cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-danieljkim"
 ./build.sh
+
+# Copy Cargo.lock to artifacts directory for SBOM generation
+cp Cargo.lock "${KOKORO_ARTIFACTS_DIR}/"
