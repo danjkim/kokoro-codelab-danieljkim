@@ -12,6 +12,14 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 
+# Install dependencies
+sudo apt-get update
+sudo apt-get install -y make build-essential curl
+
+# Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source "$HOME/.cargo/env"
+
 # Code under repo is checked out to ${KOKORO_ARTIFACTS_DIR}/github.
 # The final directory name in this path is determined by the scm name specified
 # in the job configuration.
